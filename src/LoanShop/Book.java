@@ -1,9 +1,11 @@
 package LoanShop;
-// Subklasse
+// Subclass
 public class Book extends Items {
-
-    public Book(String title, String type) { super(title, type); }
-
+    // Her laves en public attribute som trækker fra vores super class (Items)
+    public Book(String title, String type) {
+        super(title, type);
+    }
+    // Getters
     public String getTitle(){
         return title;
     }
@@ -11,7 +13,7 @@ public class Book extends Items {
     public String getType(){
         return type;
     }
-
+    // Setters
     public String setTitle(){
         return title;
     }
@@ -20,7 +22,7 @@ public class Book extends Items {
         return type;
     }
 
-    // toString metode
+    // Her laves en toString metode
     @Override
     public String toString() {
         return "Registered: " + type + " - " + title;
