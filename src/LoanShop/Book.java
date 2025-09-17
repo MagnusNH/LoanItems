@@ -2,8 +2,8 @@ package LoanShop;
 // Subclass
 public class Book extends Items {
     // Her laves en public attribute som trækker fra vores super class (Items)
-    public Book(String title, String type) {
-        super(title, type);
+    public Book(String title, String type, int id) {
+        super(title, type, id);
     }
     // Getters
     public String getTitle(){
@@ -25,6 +25,6 @@ public class Book extends Items {
     // Her laves en toString metode
     @Override
     public String toString() {
-        return "Registered: " + type + " - " + title;
+        return id + " - " + type + " - " + title;
     }
 }
