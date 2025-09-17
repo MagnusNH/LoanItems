@@ -1,7 +1,7 @@
 package LoanShop;
 //Subclass
 public class Video extends Items{
-    //Laver en public attribute som trækker fra vores super class (Items)
+    //Laver en public konstruktør som trækker fra vores super class (Items)
     public Video(String title, String type, int id){
         super(title,type,id);
     }
