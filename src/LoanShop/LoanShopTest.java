@@ -20,16 +20,22 @@ public class LoanShopTest {
         //Scanner for user input
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("How many items would you like to loan? ");
-        int i = scanner.nextInt();
+        int amountItems = 0;
+        int maxAmountItems = 10;
 
+        while (amountItems <= 0 || amountItems > maxAmountItems) {
+            System.out.println("How many items would you like to loan? ");
 
-        scanner.nextLine();
+            if (scanner.hasNextInt()) {
+                amountItems = scanner.nextInt();
+                scanner.nextLine();
+            }
 
-        if (i>10){
-            System.out.println("Max 10 items");
+            if (amountItems <= 0) {
+                System.out.println("You need to loan atleast 1 item");
+            } else if (amountItems > maxAmountItems) {
+                System.out.println("Please only input a max of " + maxAmountItems);
+            }
         }
-
-
     }
 }
