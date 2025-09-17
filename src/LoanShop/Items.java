@@ -1,21 +1,22 @@
 package LoanShop;
 
 public class Items {
-    protected String name;
+    protected String title;
     protected String type;
 
     //Laver en Constructor
     Items(String name, String type ) {
-        this.name = name;
+        this.title = name;
         this.type = type;
     }
-
-    public String getName() {
-        return name;
-    }
-    public String getType() {
-            return type;
-    }
-public void SetName(String name){this.name = name;}
+//Getters
+    public String getTitle(){return title;}
+    public String getType() {return type;}
+//Setters
+public void SetName(String name){this.title = name;}
 public void SetType(String type){this.type = type;}
+}
+//ToString
+public String toString(){
+return getTitle() +
 }
