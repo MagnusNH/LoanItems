@@ -42,7 +42,7 @@ public class LoanShopTest {
         for (int i = 0; i < amountItems; i++) {
             String type = "";
             boolean validType = false;
-
+// vil blive ved med at spørge indtil man skriver en valid type
             while (!validType) {
                 System.out.println("Enter type for item " + (i + 1) + " (Book/Video): ");
                 type = scanner.nextLine();
@@ -53,6 +53,8 @@ public class LoanShopTest {
                     System.out.println("Error 404: please only input Book or Video");
                 }
             }
+
+            // vil så spørge om title efter man har skrevet en valid type
             System.out.println("Enter the title: ");
             String title = scanner.nextLine();
 
