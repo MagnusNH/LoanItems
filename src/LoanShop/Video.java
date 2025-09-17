@@ -1,5 +1,5 @@
 package LoanShop;
-
+//Subclass
 public class Video extends Items{
     //Laver en public attribute som trækker fra vores super class (Items)
     public Video(String title, String type){
@@ -25,7 +25,7 @@ public class Video extends Items{
     }
 
     //Laver en toString metode
-    @override
+    @Override
     public String toString(){
         return "Registered: " + type + " - " + title;
     }
