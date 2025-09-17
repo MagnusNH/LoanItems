@@ -1,11 +1,11 @@
 package LoanShop;
 // Subclass
 public class Book extends Items {
-    // Her laves en public attribute som trækker fra vores super class (Items)
+    // Constructor trækker fra vores super class (Items)
     public Book(String title, String type, int id) {
         super(title, type, id);
     }
-    // Getters
+    // Getters: bruges til hente enten title eller typen for bog eller video
     public String getTitle(){
         return title;
     }
@@ -13,7 +13,7 @@ public class Book extends Items {
     public String getType(){
         return type;
     }
-    // Setters
+    // Setters: bruges til ændre title eller typen for bog eller video
     public String setTitle(){
         return title;
     }
@@ -21,7 +21,4 @@ public class Book extends Items {
     public String setType(){
         return type;
     }
-
-    // Her laves en toString metode
-
 }
