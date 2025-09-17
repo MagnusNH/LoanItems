@@ -40,15 +40,29 @@ public class LoanShopTest {
         Items[] items = new Items[amountItems];
 
         for (int i = 0; i < amountItems; i++) {
-            System.out.println("Enter video or book: number " + (i + 1) + ": ");
+            System.out.println("Enter video or book number " + (i + 1) + ": ");
             String type = scanner.nextLine();
             System.out.println("Enter the title: ");
             String title = scanner.nextLine();
 
-            if (type.equalsIgnoreCase("Book")){
+            boolean validType = false;
+
+            while (!validType) {
+                System.out.println("The following type are allowed: Book/Video");
+                System.out.println("Please input book or video for" + title + ": ");
+                type = scanner.nextLine();
+                System.out.println();
+
+                if (type.equalsIgnoreCase("Book") || type.equalsIgnoreCase("Video")) {
+                    validType = true;
+                } else {
+                    System.out.println("Error 404: please only input Book or Video");
+                }
+            }
+            if (type.equalsIgnoreCase("Book")) {
                 items[i] = new Book(title, type);
-            }else if (type.equalsIgnoreCase("Video")){
-                items[i]= new Video (title,type);
+            } else if (type.equalsIgnoreCase("Video")) {
+                items[i] = new Video(title, type);
             }
         }
         for (Items a : items) {
