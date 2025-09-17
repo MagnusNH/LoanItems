@@ -23,5 +23,12 @@ public class LoanShopTest {
         int i = scanner.nextInt();
 
 
+        scanner.nextLine();
+
+        if (i>10){
+            System.out.println("Max 10 items");
+        }
+
+
     }
 }
