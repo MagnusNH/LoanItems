@@ -22,6 +22,7 @@ public class LoanShopTest {
 
         int amountItems = 0;
         int maxAmountItems = 10;
+        int id = 0;
 
         while (amountItems <= 0 || amountItems > maxAmountItems) {
             System.out.println("How many items would you like to loan? ");
@@ -59,6 +60,7 @@ public class LoanShopTest {
             // vil så spørge om title efter man har skrevet en valid type
             System.out.println("Enter the title: ");
             String title = scanner.nextLine();
+            id = id+1;
             if (type.equalsIgnoreCase("Book")) {
                 items[i] = new Book(title, type, id);
             } else {
