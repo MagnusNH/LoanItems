@@ -26,7 +26,7 @@ public class Items {
     }
 
     public String toString() {
-
+        //toString så det ser lækkert ud
         return id + "\t" + type + "\t" + title;
     }
 

@@ -19,11 +19,11 @@ public class LoanShopTest {
 
     public static void userInput() {
         Scanner scanner = new Scanner(System.in);
-
+        //Scanner så vi får noget userinput
         int amountItems = 0;
         int maxAmountItems = 10;
         int id = 0;
-
+        //Den spørg hvor mange bøger og film vi vil låne så længe man ikke låner mere end 10 ting
         while (amountItems <= 0 || amountItems > maxAmountItems) {
             System.out.println("How many items would you like to loan? ");
 
@@ -35,7 +35,7 @@ public class LoanShopTest {
                 scanner.nextLine();
                 continue;
             }
-
+            //du kan ikke låne mindre en 1 bog/film
             if (amountItems <= 0) {
                 System.out.println("You need to loan atleast 1 item");
             } else if (amountItems > maxAmountItems) {
@@ -72,6 +72,7 @@ public class LoanShopTest {
                 items[i] = new Video(title, type, id);
             }
         }
+        //Her printer den en liste over lånte bøger og film ud :)
         System.out.println("List of loan items:");
         System.out.println("-------------------");
         System.out.println("ID\tType\tTitle");
