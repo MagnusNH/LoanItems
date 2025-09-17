@@ -3,14 +3,14 @@ package LoanShop;
 public class Items {
     protected String title;
     protected String type;
-    public int[] id;
+    public int id;
 
 
     //Laver en Constructor
     public Items(String title, String type, int id) {
         this.title = title;
         this.type = type;
-        this.id = new int[]{id};
+        this.id = id;
     }
 
     //Getters
