@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class LoanShopTest {
     public static void main (String [] args){
         welcomeMessage();
+        userInput();
     }
 //Laver en lille welcome message
 // Aniko Se vi har sat emojis ind
