@@ -6,7 +6,7 @@ public class LoanShopTest {
     public static void main (String [] args){
         welcomeMessage();
     }
-
+//Laver en lille welcome message
     public static void welcomeMessage(){
         System.out.println("**********************************");
         System.out.println("**\uD83D\uDCD6Welcome to the loan shop!\uD83D\uDCD6**");
@@ -15,6 +15,7 @@ public class LoanShopTest {
     }
 
     public static void userInput(){
+        //Scanner for user input
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("How many items would you like to loan? ");
