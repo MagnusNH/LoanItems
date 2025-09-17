@@ -18,31 +18,41 @@ public class LoanShopTest {
     }
 
     public static void userInput() {
-            Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-            int amountItems = 0;
-            int maxAmountItems = 10;
+        int amountItems = 0;
+        int maxAmountItems = 10;
 
-            while (amountItems <= 0 || amountItems > maxAmountItems) {
-                System.out.println("How many items would you like to loan? ");
+        while (amountItems <= 0 || amountItems > maxAmountItems) {
+            System.out.println("How many items would you like to loan? ");
 
-                if (scanner.hasNextInt()) {
-                    amountItems = scanner.nextInt();
-                    scanner.nextLine();
-                }
-
-                if (amountItems <= 0) {
-                    System.out.println("You need to loan atleast 1 item");
-                } else if (amountItems > maxAmountItems) {
-                    System.out.println("Please only input a max of " + maxAmountItems);
-                }
+            if (scanner.hasNextInt()) {
+                amountItems = scanner.nextInt();
+                scanner.nextLine();
             }
 
-        for (int i = 0; i < amountItems; i++){
-            System.out.println("Enter video or book: number " + (i+1) + ": ");
-            scanner.nextLine();
-            System.out.println("Enter the title: ");
-            scanner.nextLine();
+            if (amountItems <= 0) {
+                System.out.println("You need to loan atleast 1 item");
+            } else if (amountItems > maxAmountItems) {
+                System.out.println("Please only input a max of " + maxAmountItems);
+            }
         }
+        Items[] items = new Items[amountItems];
+
+        for (int i = 0; i < amountItems; i++) {
+            System.out.println("Enter video or book: number " + (i + 1) + ": ");
+            String type = scanner.nextLine();
+            System.out.println("Enter the title: ");
+            String title = scanner.nextLine();
+
+            if (type.equalsIgnoreCase("Book")){
+                items[i] = new Book(title, type);
+            }else if (type.equalsIgnoreCase("Video")){
+                items[i]= new Video (title,type);
+            }
+        }
+        for (Items a : items) {
+            System.out.println(a);
         }
     }
+}
