@@ -5,7 +5,7 @@ public class Items {
     protected String type;
 
     //Laver en Constructor
-    Items(String name, String type) {
+    public Items(String name, String type) {
         this.title = name;
         this.type = type;
     }
