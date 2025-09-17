@@ -5,8 +5,8 @@ public class Items {
     protected String type;
 
     //Laver en Constructor
-    public Items(String name, String type) {
-        this.title = name;
+    public Items(String title, String type) {
+        this.title = title;
         this.type = type;
     }
 
@@ -22,10 +22,5 @@ public class Items {
     public void setType(String type) {this.type = type;
     }
 
-    //ToString
-    @Override
-    public String toString() {
-        return getType() + " " + "(" + getTitle() + ")";
-    }
 }
 
