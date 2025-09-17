@@ -5,7 +5,7 @@ public class Book extends Items {
     public Book(String title, String type, int id) {
         super(title, type, id);
     }
-    // Getters: bruges til hente enten title eller typen for bog eller video
+    // Getters
     public String getTitle(){
         return title;
     }
@@ -13,7 +13,7 @@ public class Book extends Items {
     public String getType(){
         return type;
     }
-    // Setters: bruges til ændre title eller typen for bog eller video
+    // Setters
     public String setTitle(){
         return title;
     }
