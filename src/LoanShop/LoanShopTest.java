@@ -35,6 +35,7 @@ public class LoanShopTest {
                 System.out.println("You need to loan atleast 1 item");
             } else if (amountItems > maxAmountItems) {
                 System.out.println("Please only input a max of " + maxAmountItems);
+                System.out.println();
             }
         }
         Items[] items = new Items[amountItems];
@@ -51,6 +52,7 @@ public class LoanShopTest {
                     validType = true;
                 } else {
                     System.out.println("Error 404: please only input Book or Video");
+                    System.out.println();
                 }
             }
 
