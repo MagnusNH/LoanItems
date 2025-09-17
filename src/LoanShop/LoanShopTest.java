@@ -59,7 +59,7 @@ public class LoanShopTest {
             // vil så spørge om title efter man har skrevet en valid type
             System.out.println("Enter the title: ");
             String title = scanner.nextLine();
-            int id = 1;
+            int id = 12;
             if (type.equalsIgnoreCase("Book")) {
                 items[i] = new Book(title, type, id);
             } else {
