@@ -11,26 +11,21 @@ public class Items {
     }
 
     //Getters
-    public String getTitle() {
-        return title;
-    }
+    public String getTitle() {return title;}
 
-    public String getType() {
-        return type;
-    }
+    public String getType() {return type;}
 
     //Setters
-    public void SetName(String name) {
-        this.title = name;
+    public void setTitle(String name) {this.title = name;
     }
 
-    public void SetType(String type) {
-        this.type = type;
+    public void setType(String type) {this.type = type;
     }
 
     //ToString
+    @Override
     public String toString() {
-        return "";
+        return getType() + " " + "(" + getTitle() + ")";
     }
 }
 
