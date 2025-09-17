@@ -25,8 +25,5 @@ public class Video extends Items{
     }
 
     //Laver en toString metode
-    @Override
-    public String toString(){
-        return id + " - " + type + " - " + title;
-    }
+
 }

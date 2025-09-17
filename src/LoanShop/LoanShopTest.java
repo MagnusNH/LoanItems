@@ -67,8 +67,11 @@ public class LoanShopTest {
                 items[i] = new Video(title, type, id);
             }
         }
+        System.out.println("List of loan items:");
+        System.out.println("-------------------");
+        System.out.println("ID\tType\tTitle");
         for (Items a : items) {
-            System.out.println(a);
+            System.out.println(a.toString());
         }
     }
 }
