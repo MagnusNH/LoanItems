@@ -30,6 +30,10 @@ public class LoanShopTest {
             if (scanner.hasNextInt()) {
                 amountItems = scanner.nextInt();
                 scanner.nextLine();
+            }else{
+                System.out.println("Error 404: Only whole numbers, try again");
+                scanner.nextLine();
+                continue;
             }
 
             if (amountItems <= 0) {
@@ -38,6 +42,7 @@ public class LoanShopTest {
                 System.out.println("Please only input a max of " + maxAmountItems);
                 System.out.println();
             }
+
         }
         Items[] items = new Items[amountItems];
 
