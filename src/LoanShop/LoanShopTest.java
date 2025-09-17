@@ -59,15 +59,17 @@ public class LoanShopTest {
             // vil så spørge om title efter man har skrevet en valid type
             System.out.println("Enter the title: ");
             String title = scanner.nextLine();
-            int id = 12;
             if (type.equalsIgnoreCase("Book")) {
                 items[i] = new Book(title, type, id);
             } else {
                 items[i] = new Video(title, type, id);
             }
         }
+        System.out.println("List of loan items:");
+        System.out.println("-------------------");
+        System.out.println("ID\tType\tTitle");
         for (Items a : items) {
-            System.out.println(a);
+            System.out.println(a.toString());
         }
     }
 }

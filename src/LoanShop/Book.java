@@ -23,8 +23,5 @@ public class Book extends Items {
     }
 
     // Her laves en toString metode
-    @Override
-    public String toString() {
-        return id + " - " + type + " - " + title;
-    }
+
 }
