@@ -7,6 +7,7 @@ public class LoanShopTest {
         welcomeMessage();
     }
 //Laver en lille welcome message
+// Aniko Se vi har sat emojis ind
     public static void welcomeMessage(){
         System.out.println("**********************************");
         System.out.println("**\uD83D\uDCD6Welcome to the loan shop!\uD83D\uDCD6**");
