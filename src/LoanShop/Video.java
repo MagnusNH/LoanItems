@@ -2,8 +2,8 @@ package LoanShop;
 //Subclass
 public class Video extends Items{
     //Laver en public attribute som trækker fra vores super class (Items)
-    public Video(String title, String type){
-        super(title,type);
+    public Video(String title, String type, int id){
+        super(title,type,id);
     }
 
     //Getters
@@ -27,6 +27,6 @@ public class Video extends Items{
     //Laver en toString metode
     @Override
     public String toString(){
-        return "Registered: " + type + " - " + title;
+        return id + " - " + type + " - " + title;
     }
 }
